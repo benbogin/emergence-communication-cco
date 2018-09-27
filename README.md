@@ -1,3 +1,19 @@
 # Emergence of Communication in an Interactive World with Consistent Speakers
 
-This is a placeholder. The code for the interactive environment and the implementation of CCO will be published here soon (current plan is October).
+Author implementation of the paper: https://arxiv.org/pdf/1809.00549.pdf
+
+
+#### Pretraining
+
+```
+$ python run.py pretrain_speaker
+$ python run.py pretrain_listener
+```
+
+#### Training
+
+```
+$ python run.py train_joint 
+     --restore-speaker=experiments/pretrain_speaker/path.to.ckp
+     --restore-listener=experiments/pretrain_listener/path.to.ckp
+```
